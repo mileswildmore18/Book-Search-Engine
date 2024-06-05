@@ -1,4 +1,4 @@
-//Making a database for the types of book
+//Making a database for the types of book.
 const typeDefs = `
 type User {
     _id: ID!
