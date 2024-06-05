@@ -14,11 +14,11 @@ const resolvers = {
     Mutation: {//sign up a new user 
         addUser: async (parent, args) => {
             const user = await User.create(args);
-            const token = signToken(user); // takes the method from auth (gives token)
+            const token = signToken(user); // takes the method from auth (gives JWT token)
             return { token, user };
-        },//takes in email and password
+        },//assigning the token to the user
 
-        //logging in user
+        //logging in with e-mail and password
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
             if (!user) {
@@ -26,7 +26,7 @@ const resolvers = {
             }//checks to see if user credentials are met or not
             const correctPw = await user.isCorrectPassword(password);
             if (!correctPw) {
-                throw AuthenticationError
+                throw AuthenticationError;
             }//checks to see if password credentials are correct or not
             const token = signToken(user);
             return { token, user };
@@ -34,7 +34,7 @@ const resolvers = {
         saveBook: async (parent, { bookData }, context) => {
             if (context.user) {//needs to be logged in
                 const updatedUser = await User.findByIdAndUpdate(
-                    { _id: context.user._id },
+                    { _id: context.user._id }, //takes ID and updates the user
                     { $push: { saveBooks: bookData } }, //push it to the end of the array
                     { new: true }//add new book into the array
                 );
