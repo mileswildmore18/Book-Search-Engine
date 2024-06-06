@@ -5,7 +5,7 @@ const resolvers = {
     Query: {   //name for destructured object, logged in not logged in
         me: async (parent, args, context) => {
             if (context.user) {       //Finding one person                                                //current version of password
-                const userData = await User.findOne({ _id: context.user._id }).select("-__v - password")
+                const userData = await User.findOne({ _id: context.user._id }).select("-__v -password")
                 return userData;
             }//Gives an error to user signing up if credentials are not met
             throw AuthenticationError;
