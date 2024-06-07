@@ -35,7 +35,7 @@ const resolvers = {
             if (context.user) {//needs to be logged in
                 const updatedUser = await User.findByIdAndUpdate(
                     { _id: context.user._id }, //takes ID and updates the user
-                    { $push: { saveBooks: bookData } }, //push it to the end of the array
+                    { $push: { savedBooks: bookData } }, //push it to the end of the array
                     { new: true }//add new book into the array
                 );
                 return updatedUser; //gives results of the updated books by the user's login information
