@@ -1,7 +1,9 @@
 # Book-Search-Engine
 
+![alt text](/Assets/images/book-search-engine-screenshot.png)
+
 ## Description
-Welcome to the my portfolio! You will get a chance to see what I am all about and what I have learned thoughtout my experience of coding for websites. You also will get a chance to learn all about me and be able to explore projects I made with my team. Here I used a new tool known as React to make my portfolio professional for people to view my projects I made since the beginning of the year. While building my portfolio, I learned about how to use React to add more effects to my page, such as connecting the header, navigation bar, and footer to different pages within one file. I also featured a new animation technique to make my pages very appealing to look at as well as showing what I am capable of creating. I also learned how to connect my navigation pages with react routing to connect to other pages and to keep the codes simple and easier to navigate throughout my React portfolio page. I look forward to working with employees to build websites and to show my skills to companies!
+Welcome to the Book Search Engine. Here you get a chance to pick out any book you want and save them in an archive on your account. When you open up the website, you will be presented with the home page to search for books. In order to save the books you want, you will have to sign up and be logged in. Whenever you want, not only do you save books, but you can delete books from your archive anytime you want. What I learned from this website while building it was using queries to build up the ids of books along with its author, the description and adding tokens to the user when they have their own account to acrhive books they want. You can also look in MongoDB for all the archived books you have with the account you signed up with. Details are featured in the resources section for more information. Enjoy exploring for your favourite books!
 
 ## Link
 https://mileswildmore.netlify.app
@@ -20,14 +22,13 @@ https://mileswildmore.netlify.app
 You will need these npm (Node Package Manager) in order to view the Book Search Engine. You will navigate to the root of the directory of the package.json file, navigate to "Open in Integrated Terminal" and enter these commands to install the packages:
 ```
 npm install
-npm run start
 
 
 ```
 
 
 ## Usage
-You can use the "Node.js" terminal to check out my portfolio, and checkout information about me and the projects I made within my time working on coding.
+You can use the "Node.js" terminal to check out the Book Search Engine, and checkout information about me and the projects I made within my time working on coding.
 
 ## License
 This project is licensed with MIT

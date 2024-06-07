@@ -13,7 +13,7 @@ import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 import { QUERY_ME } from '../utils/queries';
 const SavedBooks = () => {
-  
+
   //const [userData, setUserData] = useState({});
 
   // use this to determine if `useEffect()` hook needs to run again
@@ -22,7 +22,8 @@ const SavedBooks = () => {
   const [deleteBook, { error }] = useMutation(REMOVE_BOOK);
   const {loading, data} = useQuery(QUERY_ME);
   const userMainData = data?.me || {}
-  
+  console.log ("Showing Saved Books")
+  console.log(userMainData)
   //useEffect(() => {
     // const getUserData = async () => {
     //   try {
@@ -79,8 +80,8 @@ const SavedBooks = () => {
 
   return (
     <>
-      <div fluid className="text-light bg-dark p-5">
-        <Container>
+      <div  className="text-light bg-dark p-5">
+        <Container fluid>
           <h1>Viewing saved books!</h1>
         </Container>
       </div>
